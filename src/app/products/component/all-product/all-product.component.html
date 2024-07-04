@@ -1,3 +1,4 @@
+<div *ngIf="!loader">
 <select class="form-select mt-2"(change)="filter($event)" >
     <option value="all">All</option>
     <option *ngFor="let categorie of categories" [value]="categorie">{{categorie}}</option>
@@ -17,4 +18,12 @@
       </div>
     </div>
   </div>
+  </div>
+
+  <div class="loader-container" *ngIf="loader">
+    <div class="loader d-flex justify-content-center align-items-center">
+      <app-spinner></app-spinner>
+    </div>
+  </div>
+  
   

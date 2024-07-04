@@ -26,3 +26,29 @@
     padding-bottom: 60px; /* Same height as the footer */
   }
   
+  .loader{
+    width:100%;
+    height: 100%;
+    margin-bottom: auto;
+  }
+
+
+  .loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a semi-transparent background */
+    z-index: 9999; /* Ensure it is on top of other content */
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

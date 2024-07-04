@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProductDetailsComponent } from './component/product-details/product-details.component';
 import { AllProductComponent } from './component/all-product/all-product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ]
 })
 export class ProductsModule { }

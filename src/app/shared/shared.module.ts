@@ -4,6 +4,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { SelectComponent } from './component/select/select.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { SpinnerComponent } from './component/spinner/spinner.component';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     FooterComponent,
     SelectComponent,
-    NavbarComponent
+    NavbarComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { RouterModule } from '@angular/router';
   exports :[
 
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    SpinnerComponent
 
   ]
 })
