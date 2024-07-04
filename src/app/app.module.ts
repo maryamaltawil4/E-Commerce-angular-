@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { CardsModule } from './cards/cards.module';
 import { ProductsModule } from './products/products.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,9 @@ import { ProductsModule } from './products/products.module';
     AppRoutingModule,
     SharedModule,
     CardsModule,
-    ProductsModule
-    
+    ProductsModule,
+    HttpClientModule
+
   ],
   providers: [
     provideClientHydration()

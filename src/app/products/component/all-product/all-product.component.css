@@ -1,0 +1,28 @@
+.custom-image {
+    max-width: 80%; 
+    height: auto;  
+    max-height: 200px; 
+    object-fit: cover; 
+  }
+  
+  .card-text{
+    font-size: 12px;
+  }
+  
+  .price-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bcf6cf; /* Light background color */
+    border: 1px solid #ddd; /* Border around the box */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding inside the box */
+    height: 20px; /* Same height as the button */
+    margin-top: auto;
+    margin-left: 10px; /* Spacing between the button and the price box */
+  }
+
+  .content {
+    padding-bottom: 60px; /* Same height as the footer */
+  }
+  

@@ -1,1 +1,14 @@
-<p>all-product works!</p>
+<div class="row justify-content-center content ">
+    <div class="card text-center col-3 m-3" *ngFor="let product of products">
+      <div class="card-body">
+        <img src="{{product.image}}" class="img-fluid custom-image">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text pt-4">{{product.description}}</p>
+      </div>
+      <div class="mb-3 row justify-content-center ">
+        <a href="#" class="btn btn-primary bg-success bg-gradient col-6">add to card </a>
+        <p class="price-box col-2">{{product.price}}</p>
+      </div>
+    </div>
+  </div>
+  
