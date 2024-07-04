@@ -15,4 +15,13 @@ export class ProductService {
     return this._HttpClient.get("https://fakestoreapi.com/products");
   }
 
+  getCategories(): Observable<any> {
+    return this._HttpClient.get("https://fakestoreapi.com/products/categories");
+  }
+
+  getCategoriesSpecific(event:any):Observable<any> {
+    return this._HttpClient.get("https://fakestoreapi.com/products/category/"+event);
+  }
+
+
 }

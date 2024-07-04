@@ -1,3 +1,9 @@
+<select class="form-select mt-2"(change)="filter($event)" >
+    <option value="all">All</option>
+    <option *ngFor="let categorie of categories" [value]="categorie">{{categorie}}</option>
+</select>
+
+
 <div class="row justify-content-center content ">
     <div class="card text-center col-3 m-3" *ngFor="let product of products">
       <div class="card-body">
