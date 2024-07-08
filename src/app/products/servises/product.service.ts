@@ -23,5 +23,9 @@ export class ProductService {
     return this._HttpClient.get("https://fakestoreapi.com/products/category/"+event);
   }
 
+  getOneProduct(event:any):Observable<any> {
+    return this._HttpClient.get("https://fakestoreapi.com/products/"+event);
+  }
+
 
 }

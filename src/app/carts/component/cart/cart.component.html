@@ -1,0 +1,21 @@
+
+
+<h2>total = {{total}}</h2>
+<div class="row justify-content-center content mb-5">
+    <div class="card text-center col-md-3 m-3" *ngFor="let data of cartData">
+      <div class="card-body">
+        
+        <img src="{{data.image}}" class="img-fluid custom-image">
+        <div class="product-info">
+          <h5 class="card-title">{{data.title}}</h5>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row justify-content-between">
+          <p class="price-box">{{data.price | currency}}</p>
+          <button class="btn bg-success bg-gradient" (click)="deleteCart(data.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

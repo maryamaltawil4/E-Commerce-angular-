@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-select',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './select.component.css'
 })
 export class SelectComponent {
+
+  @Input() data:any[]=[];
+  @Output() selectOption  = new EventEmitter;
+  selectedCategory: string = 'all';
+
+
+  getOpition(event:any){
+    this.selectOption.emit(this.selectedCategory);
+  }
 
 }

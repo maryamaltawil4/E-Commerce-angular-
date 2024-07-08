@@ -1,1 +1,27 @@
-<p>product-details works!</p>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="row g-0">
+           
+            <div class="col-md-4">
+              <img src="{{ data.image }}" class="img-fluid rounded-start" alt="{{ data.title }}">
+            </div>
+            
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ data.title }}</h5>
+                <p class="card-text">{{ data.description }}</p>
+                <h6 class="text-muted">Price: {{ data.price | currency }}</h6>
+                
+                <div class="card-footer text-muted">
+                  <button class="btn bg-success bg-gradient" routerLink="/products">Back</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

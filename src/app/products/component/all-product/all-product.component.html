@@ -1,19 +1,21 @@
 <div *ngIf="!loader">
-<select class="form-select mt-2"(change)="filter($event)" >
-    <option value="all">All</option>
-    <option *ngFor="let categorie of categories" [value]="categorie">{{categorie}}</option>
-</select>
 
+    <select class="form-select mt-2" [(ngModel)]="selectedCategory" (change)="filter($event)">
+      <option value="all">All</option>
+      <option *ngFor="let categorie of categories" [value]="categorie">{{categorie}}</option>
+    </select>
+
+    <!-- <app-select [data]="categories" (selectOption)="filter($event)" ></app-select> -->
 
 <div class="row justify-content-center content ">
     <div class="card text-center col-3 m-3" *ngFor="let product of products">
-      <div class="card-body">
-        <img src="{{product.image}}" class="img-fluid custom-image">
+      <div class="card-body" [routerLink]="['/detail', product.id]">
+        <img src="{{product.image}}"class="img-fluid custom-image">
         <h5 class="card-title">{{product.title}}</h5>
         <p class="card-text pt-4">{{product.description}}</p>
       </div>
       <div class="mb-3 row justify-content-center ">
-        <a href="#" class="btn btn-primary bg-success bg-gradient col-6">add to card </a>
+        <button  class="btn btn-primary bg-success bg-gradient col-6" (click)="addCart(product)">add to cart </button>
         <p class="price-box col-2">{{product.price}}</p>
       </div>
     </div>
